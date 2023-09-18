@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package create;
+
+service CreateService {
+    rpc CreateWallet(google.protobuf.Empty) returns (Wallet);
+}
+
+message Wallet {
+    string address = 1;
+}

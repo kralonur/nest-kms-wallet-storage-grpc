@@ -30,6 +30,10 @@ export class WalletDbService {
     return await new this.walletModel(doc).save();
   }
 
+  async findOne(filter: FilterQuery<WalletDocument>) {
+    return await this.walletModel.findOne(filter);
+  }
+
   private async exists(filter: FilterQuery<WalletDocument>) {
     return await this.walletModel.exists(filter);
   }

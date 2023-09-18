@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package decrypt;
+
+service DecryptService {
+    rpc DecryptWallet(Wallet) returns (WalletDetailed);
+}
+
+message Wallet {
+    string address = 1;
+}
+
+message WalletDetailed {
+    string address = 1;
+    string phrase = 2;
+    string path = 3;
+}

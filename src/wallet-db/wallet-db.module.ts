@@ -8,5 +8,6 @@ import { WalletDbService } from './wallet-db.service';
     MongooseModule.forFeature([{ name: Wallet.name, schema: WalletSchema }]),
   ],
   providers: [WalletDbService],
+  exports: [WalletDbService],
 })
 export class WalletDbModule {}

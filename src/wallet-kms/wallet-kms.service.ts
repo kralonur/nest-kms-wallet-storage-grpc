@@ -3,16 +3,7 @@ import { KmsService } from 'src/kms/kms.service';
 
 @Injectable()
 export class WalletKmsService {
-  constructor(private kmsService: KmsService) {
-    this.encryptMnemonic('test', 'test').then((encryptedMnemonic) => {
-      console.log(encryptedMnemonic);
-      this.decryptMnemonic(encryptedMnemonic, 'test').then(
-        (decryptedMnemonic) => {
-          console.log(decryptedMnemonic);
-        },
-      );
-    });
-  }
+  constructor(private kmsService: KmsService) {}
 
   async encryptMnemonic(mnemonic: string, address: string) {
     const encryptionContext = this.encryptionContext(address);
