@@ -32,6 +32,22 @@
 $ yarn install
 ```
 
+## Generate proto files for typescript
+
+Install protobuf compiler (if not exists) and be sure version 3+
+
+https://grpc.io/docs/protoc-installation/
+
+```bash
+protoc --version
+```
+
+Generate protobuf files (be sure src/proto/compile.proto.sh has execution permission):
+
+```bash
+yarn proto:generate
+```
+
 ## Running the app
 
 ```bash
