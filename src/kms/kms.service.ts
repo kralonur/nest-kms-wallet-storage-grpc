@@ -8,7 +8,7 @@ export class KmsServiceError extends ServiceError<KmsServiceErrorTypes> {}
 
 @Injectable()
 export class KmsService {
-  private region: string;
+  region: string;
   private keyId: string;
   private client: KMSClient;
 
@@ -28,10 +28,10 @@ export class KmsService {
   }
 
   async encrypt(
-    keyId: string = this.keyId,
-    kmsClient: KMSClient = this.client,
     textToEncrypt: string,
     encryptionContext?: Record<string, string>,
+    keyId: string = this.keyId,
+    kmsClient: KMSClient = this.client,
   ) {
     const plaintext: Uint8Array = Buffer.from(textToEncrypt);
 
@@ -52,10 +52,10 @@ export class KmsService {
   }
 
   async decrypt(
-    keyId: string = this.keyId,
-    kmsClient: KMSClient = this.client,
     textToDecrypt: string,
     encryptionContext?: Record<string, string>,
+    keyId: string = this.keyId,
+    kmsClient: KMSClient = this.client,
   ) {
     const ciphertextBlob: Uint8Array = Buffer.from(textToDecrypt, 'base64');
 
