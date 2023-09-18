@@ -28,9 +28,11 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
+    "@aws-sdk/client-kms": "^3.414.0",
     "@grpc/grpc-js": "^1.9.3",
     "@grpc/proto-loader": "^0.7.9",
     "@nestjs/cli": "^10.1.17",
+    "@nestjs/config": "^3.1.1",
     "@nestjs/microservices": "^10.2.5",
     "@nestjs/schematics": "^10.0.2",
     "@nestjs/testing": "^10.2.5",
