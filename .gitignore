@@ -41,6 +41,7 @@ lerna-debug.log*
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+/src/certs/generated
 
 # files
 .env

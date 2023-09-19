@@ -18,7 +18,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "proto:generate": "src/proto/compile.proto.sh"
+    "proto:generate": "src/proto/compile.proto.sh",
+    "certs:generate": "src/certs/generate-certs.sh"
   },
   "dependencies": {
     "@nestjs/common": "^10.2.5",

@@ -4,7 +4,8 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "assets": [
-      "proto/*.proto"
+      "proto/*.proto",
+      "certs/generated/*.*"
     ],
     "watchAssets": true,
     "deleteOutDir": true

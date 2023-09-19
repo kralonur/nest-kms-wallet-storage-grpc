@@ -1,5 +1,3 @@
-
-
 # Root directory of app
 ROOT_DIR=$(git rev-parse --show-toplevel)
 
@@ -16,6 +14,7 @@ OUT_DIR="${ROOT_DIR}/src/proto/generated"
 rm -r "${OUT_DIR}"
 mkdir "${OUT_DIR}"
 
+echo "Generating TS files ..."
 protoc \
 --plugin="${PROTOC_GEN_TS_PATH}" \
 --ts_proto_out="${OUT_DIR}" \
